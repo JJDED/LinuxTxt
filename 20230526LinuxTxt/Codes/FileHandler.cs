@@ -10,6 +10,7 @@ internal class FileHandler
 {
     public bool CreateFile()
     {
+
         bool success = true;
 
         try
