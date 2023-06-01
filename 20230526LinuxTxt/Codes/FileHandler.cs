@@ -8,26 +8,21 @@ namespace _20230526LinuxTxt.Codes;
 
 internal class FileHandler
 {
-    //Update på Linux
-    //public string FileName { get; set; }
-    //public string MyUserDir { get => Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), FileName }
-    //public FileHandler(string fileName) => FileName = fileName;
-    public bool CreateFile() // => File.Create(MyUserDir)
+    public bool CreateFile()
     {
         bool success = true;
 
         try
         {
-            // C:\\Users\Users\Jamie
+            
             string myUserFolder = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
-            File.Create(Path.Combine(myUserFolder, "test.txt"));
-            //File.Create();
+            File.Create(Path.Combine(myUserFolder, "test.txt"));            
             Console.WriteLine("File created");
         }
         catch (Exception)
         {
             success = false;
-            Console.WriteLine("File could not create");
+            Console.WriteLine("File could not be created");
         }
 
         return success;
